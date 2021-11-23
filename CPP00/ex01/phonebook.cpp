@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/24 01:45:28 by jcluzet          ###   ########.fr       */
+/*   Updated: 2021/11/24 02:46:30 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,15 @@ int PhoneBook::searchContact()
         i++;
     }
     std::cout << "\n|___________________________________________|\n";
-    std::cout << "\nQuick search : ";
+    std::cout << "\nQuick search (type index): ";
     std::getline(std::cin, input);
     std::cout << std::endl;
     while (is_number(input) == 0 || std::stoi(input) > PhoneBook::nb_contacts || std::stoi(input) < 1)
     {
         if (is_number(input) == 0)
-            std::cout << "\nError not a number\nIndex of the contact you want to search : ";
+            std::cout << "\nError not a number\nQuick search (type index):  ";
         else
-            std::cout << "\nError index not exist\nIndex of the contact you want to search : ";
+            std::cout << "\nError index not exist\nQuick search (type index):  ";
         std::getline(std::cin, input);
     }
     showContact(std::stoi(input) - 1);
@@ -104,6 +104,8 @@ int is_number(std::string str)
     int i;
 
     i = 0;
+    if (str.empty())
+        return (0);
     while (str[i])
     {
         if (str[i] < '0' || str[i] > '9')
