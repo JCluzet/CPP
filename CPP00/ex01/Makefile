@@ -22,9 +22,9 @@ SUB_DIR     := ./
 OBJ_DIR 	:=	$(BUILD_DIR)/obj
 DIRS		:=	$(OBJ_DIR) $(addprefix $(OBJ_DIR)/, $(SUB_DIR))
 OBJS 	    :=	$(SRCS:%.c=$(OBJ_DIR)/%.o)
-SRCS        :=  phonebook.cpp \
+SRCS        :=  PhoneBook.cpp \
 				main.cpp \
-				Contact.cpp
+				Contacts.cpp
 
 ################################################################################
 #                                  Makefile  objs                              #
