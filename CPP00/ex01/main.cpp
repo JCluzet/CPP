@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 20:43:14 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/24 01:15:17 by jcluzet          ###   ########.fr       */
+/*   Updated: 2021/11/24 01:44:23 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int main(void)
     {
         std::cout << "$ ➔ ";   
         std::getline(std::cin, input);
-        if (ft_strcmp(input, "ADD"))
+        if (input == "ADD")
                 PhoneBook.addContact();
-        else if (ft_strcmp(input, "SEARCH"))
+        else if (input == "SEARCH")
                 PhoneBook.searchContact();
-        else if (ft_strcmp(input, "EXIT"))
+        else if (input == "EXIT")
             return (0);
         else
             std::cout << "Wrong input" << std::endl;

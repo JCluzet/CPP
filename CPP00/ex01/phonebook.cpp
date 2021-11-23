@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/24 01:37:17 by jcluzet          ###   ########.fr       */
+/*   Updated: 2021/11/24 01:45:28 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,50 +42,6 @@ int PhoneBook::addContact()
     && user[nb_contacts].get_nname() == ""))
         PhoneBook::nb_contacts++;
     std::cout << std::endl;
-    return (1);
-}
-
-std::string Contacts::get_fname() const
-{
-    return m_fname;
-}
-
-std::string Contacts::get_lname() const
-{
-    return m_lname;
-}
-
-std::string Contacts::get_nname() const
-{
-    return m_nname;
-}
-
-std::string Contacts::get_pnumber() const
-{
-    return m_pnumber;
-}
-
-std::string Contacts::get_secrets() const
-{
-    return m_secrets;
-}
-
-int Contacts::get_id() const
-{
-    return m_id;
-}
-
-int is_number(std::string str)
-{
-    int i;
-
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] < '0' || str[i] > '9')
-            return (0);
-        i++;
-    }
     return (1);
 }
 
@@ -128,7 +84,7 @@ int PhoneBook::searchContact()
 
 int PhoneBook::showContact(int index)
 {
-    std::cout << "\nContact " << index << " :\n" << std::endl;
+    std::cout << "\nContact " << index + 1 << " :\n" << std::endl;
     std::cout << "FIRST_NAME     = " << user[index].get_fname() << std::endl;
     std::cout << "LAST_NAME      = " << user[index].get_lname() << std::endl;
     std::cout << "NICKNAME       = " << user[index].get_nname() << std::endl;
@@ -138,65 +94,21 @@ int PhoneBook::showContact(int index)
     return (0);
 }
 
-void print_contacts(std::string str)
-{
-    int i = 0;
-
-    if (str.length() > 10)
-    {
-        str[9] = '.';
-        while (str[i] && i < 10)
-        {
-            std::cout << str[i];
-            i++;
-        }
-    }
-    else
-        std::cout << std::setw(10) << str;
-}
-
-void Contacts::setFname(std::string str)
-{
-    m_fname = str;
-}
-
-void Contacts::setLname(std::string str)
-{
-    m_lname = str;
-}
-
-void Contacts::setNname(std::string str)
-{
-    m_nname = str;
-}
-
-void Contacts::setnumber(std::string str)
-{
-    m_pnumber = str;
-}
-
-void Contacts::setsecrets(std::string str)
-{
-    m_secrets = str;
-}
-
-void Contacts::setid(int nb)
-{
-    m_id = nb;
-}
-
-bool ft_strcmp(std::string str, std::string cmd)
-{
-    int i = 0;
-
-    while (str[i] == cmd[i] && str[i])
-        i++;
-    if ((str[i] - cmd[i]) != 0)
-        return (0);
-    return(1);
-}
-
 PhoneBook::PhoneBook()
 {
     nb_contacts = 0;
+}
+
+int is_number(std::string str)
+{
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        if (str[i] < '0' || str[i] > '9')
+            return (0);
+        i++;
+    }
+    return (1);
 }
