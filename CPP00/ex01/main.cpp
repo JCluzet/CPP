@@ -6,13 +6,13 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 20:43:14 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/23 01:49:31 by jcluzet          ###   ########.fr       */
+/*   Updated: 2021/11/24 01:15:17 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
     PhoneBook PhoneBook;
     std::string input;
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     std::cout << "       Available command : ADD | SEARCH | EXIT\n\n\n\n\n\n\n\n\n" << std::endl;
     while (1)
     {
-        std::cout << "$ ➔ ";
+        std::cout << "$ ➔ ";   
         std::getline(std::cin, input);
         if (ft_strcmp(input, "ADD"))
                 PhoneBook.addContact();
@@ -33,14 +33,3 @@ int main(int argc, char **argv)
     }
     return 0;
 }
-
-
-
-
-
-// int Contacts::is_empty()
-// {
-//     if (!m_fname && !m_lname && !m_nname && !m_pnumber && !m_secrets)
-//         return(1);
-//     return (0);
-// }

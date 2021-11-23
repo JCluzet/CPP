@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 02:13:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/23 02:13:45 by jcluzet          ###   ########.fr       */
+/*   Updated: 2021/11/24 01:32:03 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define PHONEBOOK_HPP
 
 # include <iostream>
+# include <iomanip>
 
 bool ft_strcmp(std::string str, std::string cmd);
+void print_contacts(std::string str);
 
 class Contacts
 {
@@ -52,6 +54,7 @@ class PhoneBook
         PhoneBook();
         int addContact();
         int searchContact();
+        int showContact(int index);
 
     private:
         Contacts user[8];
