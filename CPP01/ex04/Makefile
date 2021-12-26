@@ -8,7 +8,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := human
+NAME        := replace
 BIMLX       := OFF
 CC        := clang++
 CFLAGS      := -Wall -Wextra -Werror
@@ -23,10 +23,7 @@ OBJ_DIR 	:=	$(BUILD_DIR)/obj
 DIRS		:=	$(OBJ_DIR) $(addprefix $(OBJ_DIR)/, $(SUB_DIR))
 OBJS 	    :=	$(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
-SRCS        :=      main.cpp \
-					Weapon.cpp \
-					HumanB.cpp \
-					HumanA.cpp \
+SRCS        :=	main.cpp
 
 ################################################################################
 #                                  Makefile  objs                              #
