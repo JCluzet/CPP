@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/24 02:46:30 by jcluzet          ###   ########.fr       */
+/*   Updated: 2021/12/28 14:10:40 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ int PhoneBook::addContact()
     user[PhoneBook::nb_contacts].setNname(input);
     std::cout << "NUMBER           ➔ ";
     std::getline(std::cin, input);
+    while(is_number(input) == 0 || input.size() > 14)
+    {
+        std::cout << "Wrong input, please enter a valid number" << std::endl;
+        std::cout << "NUMBER           ➔ ";
+        std::getline(std::cin, input);
+    }
     user[PhoneBook::nb_contacts].setnumber(input);
     std::cout << "DARKEST SECRET'S ➔ ";
     std::getline(std::cin, input);
