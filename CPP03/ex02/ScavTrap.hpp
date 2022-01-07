@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 13:56:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:41:11 by jcluzet          ###   ########.fr       */
+/*   Created: 2022/01/04 17:55:26 by jcluzet           #+#    #+#             */
+/*   Updated: 2022/01/07 21:35:49 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-# include <iomanip>
-# include <iostream>
-# include "Weapon.hpp"
+#include <iostream>
+#include "ClapTrap.hpp"
 
-class HumanA
+class ScavTrap : public ClapTrap
 {
-    private:
-        Weapon _weapon;
-        std::string _name;
     public:
-        HumanA(std::string name, Weapon weapon);
-        ~HumanA();
-        void attack();
+        // ScavTrap(ScavTrap const& other);
+        ScavTrap(std::string name);
+        ~ScavTrap();
+        ScavTrap& operator=(ScavTrap const& src);
+
+        void guardGate();
 };
 
 #endif

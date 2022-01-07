@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 13:56:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:41:11 by jcluzet          ###   ########.fr       */
+/*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
+/*   Updated: 2022/01/07 21:37:28 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include <iostream>
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-# include <iomanip>
-# include <iostream>
-# include "Weapon.hpp"
-
-class HumanA
+int main(void)
 {
-    private:
-        Weapon _weapon;
-        std::string _name;
-    public:
-        HumanA(std::string name, Weapon weapon);
-        ~HumanA();
-        void attack();
-};
+    FragTrap u("u");
+    
+    FragTrap b(u);
 
-#endif
+    b.highFivesGuys();
+
+    b.takeDamage(8);
+    b.beRepaired(10);
+}

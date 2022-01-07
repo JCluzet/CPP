@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 13:56:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:41:11 by jcluzet          ###   ########.fr       */
+/*   Created: 2022/01/07 21:20:53 by jcluzet           #+#    #+#             */
+/*   Updated: 2022/01/07 22:00:49 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-# include <iomanip>
-# include <iostream>
-# include "Weapon.hpp"
+#include <iostream>
+#include "ClapTrap.hpp"
 
-class HumanA
+class FragTrap : virtual public ClapTrap
 {
-    private:
-        Weapon _weapon;
-        std::string _name;
     public:
-        HumanA(std::string name, Weapon weapon);
-        ~HumanA();
-        void attack();
+        FragTrap(FragTrap const& other);
+        FragTrap(std::string name);
+        ~FragTrap();
+        FragTrap& operator=(FragTrap const& src);
+
+        void highFivesGuys();
 };
 
 #endif
