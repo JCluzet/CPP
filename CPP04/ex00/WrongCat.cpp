@@ -1,47 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 00:14:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 01:45:22 by jcluzet          ###   ########.fr       */
+/*   Created: 2022/01/08 00:29:04 by jcluzet           #+#    #+#             */
+/*   Updated: 2022/01/08 01:59:49 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-void Animal::makeSound() const
-{
-    std::cout << "*LOUD ANIMAL SOUND*" << std::endl;
+WrongCat::WrongCat() {
+    std::cout << "WrongCat constructor" << std::endl;
+    this->_type = "WrongCat";
 }
 
-std::string Animal::getType() const
+WrongCat::~WrongCat()
 {
-    return _type;
+    std::cout << "WrongCat destructor" << std::endl;
 }
 
-Animal::Animal()
+WrongCat::WrongCat(WrongCat const& other)
 {
-    std::cout << "Animal constructor" << std::endl;
-}
-
-Animal::~Animal()
-{
-    std::cout << "Animal destructor" << std::endl;
-}
-
-Animal::Animal(Animal const& other)
-{
-    std::cout << "Animal copy constructor" << std::endl;
+    std::cout << "WrongCat copy constructor" << std::endl;
     this->_type = other._type;
 }
 
-Animal& Animal::operator=(Animal const& src)
+WrongCat& WrongCat::operator=(WrongCat const& src)
 {
-    std::cout << "Assignation Animal operator called" << std::endl;
+    std::cout << "Assignation WrongCat operator called" << std::endl;
     this->_type = src._type;
     return (*this);
+}
+
+void WrongCat::makeSound() const
+{
+    std::cout << "Wrong Miaou!" << std::endl;
 }
