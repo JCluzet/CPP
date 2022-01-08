@@ -6,12 +6,12 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:15:16 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 02:04:23 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/08 02:12:12 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONG_ANIMAL_HPP
+# define WRONG_ANIMAL_HPP
 #include <iostream>
 
 class WrongAnimal {

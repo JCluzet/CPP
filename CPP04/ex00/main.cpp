@@ -6,15 +6,13 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:26:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 02:03:33 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/08 02:11:32 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Animal.hpp"
-#include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
+#include "Dog.hpp"
 #include "WrongCat.hpp"
 
 int main(void)

@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:14:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 02:00:11 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/08 02:15:34 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ WrongAnimal::WrongAnimal()
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "AnimaWrongAnimall destructor" << std::endl;
+    std::cout << "WrongAnimal destructor" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const& other)
