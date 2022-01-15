@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 20:23:09 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/15 20:34:30 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/15 20:08:50 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,15 @@ void Bureaucrat::decrementGrade(void) {
         throw Bureaucrat::GradeTooLowException();
 }
 
-std::ostream& operator<<(std::ostream& os, const Bureaucrat& src) {
-    os << src.getName() << ", bureaucrat grade " << src.getGrade();
-    return os;
+void Bureaucrat::signForm(Form &src) {
+    if (src.getSignGrade() < this->getGrade())
+    {
+        throw Bureaucrat::FormNotSignedExceptionalgr();
+    }
+    if (src.getSign())
+    {
+        throw Bureaucrat::FormNotSignedExceptional();
+    }
+    std::cout << this->_name << " signs " << src.getName() << std::endl;
+    src.setSign();
 }

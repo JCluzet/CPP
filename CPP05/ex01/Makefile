@@ -8,14 +8,15 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := bureaucrat
+NAME        := form
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
-SRCS        :=      Bureaucrat.cpp \
+SRCS        :=      Form.cpp \
+				Bureaucrat.cpp \
 				main.cpp \
 				
 OBJS        := $(SRCS:.c=.o)
