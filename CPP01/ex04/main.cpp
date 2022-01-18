@@ -22,7 +22,8 @@ std::string replace_line(std::string line, std::string old, std::string _new)
         {
             if (line.substr(i, old.size()) == old)
             {
-                line.replace(i, old.size(), _new);
+                line.erase(i, old.size());
+                line.insert(i, _new);
                 i += _new.size();
             }
         }
