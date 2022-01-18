@@ -9,21 +9,19 @@
 ################################################################################
 
 NAME        := zombie
-BIMLX       := OFF
-CC        := clang++
-CFLAGS      := -Wall -Wextra -Werror
+CC         := c++
+FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
+SRCS        :=      main.cpp \
+				
+OBJS        := $(SRCS:.c=.o)
+.c.o:
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-SRCS_DIR    := ./
-SUB_DIR     := ./
-OBJ_DIR 	:=	$(BUILD_DIR)/obj
-DIRS		:=	$(OBJ_DIR) $(addprefix $(OBJ_DIR)/, $(SUB_DIR))
-OBJS 	    :=	$(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
-SRCS        :=	main.cpp
 
 ################################################################################
 #                                  Makefile  objs                              #
@@ -38,32 +36,23 @@ BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
 RM		    := rm -f
 
-$(NAME):	$(OBJS)
-			@echo "\033[34mCompilation of $(NAME) ...\033[0m"
-			@$(CC) $(CFLAGS) $(INCS) $(SRCS) -o $(NAME)
-			@echo "\033[32m$(NAME) created\n\033[0m"
+${NAME}:	${OBJS}
+			@echo "$(GREEN)Compilation ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
+			@${CC} ${FLAGS} -o ${NAME} ${OBJS}
+			@echo "$(GREEN)$(NAME) created\033[0m ✔️"
 
-all:		$(NAME)
+all:		${NAME}
 
 bonus:		all
 
 clean:
-			@ echo "Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ..."
-			@ $(RM) $(OBJS)
-			@ rm -rf $(BUILD_DIR)
+			@ ${RM} *.o
+			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:		clean
-			@ echo "Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ..."
-			@ $(RM) $(NAME)
+			@ ${RM} ${NAME}
+			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
 
 re:			fclean all
-
-$(BUILD_DIR):
-			@ echo "Creating $(RED) $(NAME) $(CLR_RMV)..."
-			@ mkdir $(NAME) $(DIRS)
-
-$(OBJ_DIR)/%.o:$(SRCS_DIR)/%.cpp | $(BUILD_DIR)
-			@ echo "Compiling $(YELLOW) $< $(CLR_RMV)..."
-			@ $(CC) $(CFLAGS) -c $< -o $(NAME) $(INCS)
 
 .PHONY:		all clean fclean re

@@ -6,12 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 19:07:16 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:39:34 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/18 16:48:43 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ZOMBIE_HPP
-#  define ZOMBIE_HPP
+# pragma once
 # include <iomanip>
 # include <iostream>
 
@@ -27,5 +26,3 @@ class Zombie
         void randomChump( std::string name );
         Zombie* newZombie(std::string name);
 };
-
-#endif

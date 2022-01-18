@@ -6,26 +6,23 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 13:56:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:41:11 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/18 17:07:31 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#pragma once
 
-# include <iomanip>
 # include <iostream>
 # include "Weapon.hpp"
 
-class HumanA
+class HumanB
 {
     private:
-        Weapon _weapon;
-        std::string _name;
+        Weapon* _weapon;
+        std::string const _name;
     public:
-        HumanA(std::string name, Weapon weapon);
-        ~HumanA();
-        void attack();
+        void setWeapon(Weapon& weaponptr);
+        HumanB(std::string name);
+        ~HumanB();
+        void attack() const ;
 };
-
-#endif
