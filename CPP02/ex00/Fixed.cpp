@@ -6,26 +6,23 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:58:44 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/01 19:13:57 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/25 15:00:53 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
 # include "Fixed.hpp"
 
-Fixed::Fixed(Fixed const& other)
-{
+Fixed::Fixed(Fixed const& other) {
     std::cout << "Copy constructor called" << std::endl;
     *this = other;
 }
 
-Fixed::Fixed(void) : fixed_pt(0)
-{
+Fixed::Fixed(void) : fixed_pt(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::~Fixed(void)
-{
+Fixed::~Fixed(void) {
     std::cout << "Destructor called" << std::endl;
 }
 
@@ -44,3 +41,8 @@ Fixed& Fixed::operator=(Fixed const& a) {
     this->fixed_pt = a.getRawBits();
     return(*this);
 }
+
+std::ostream& operator<<(std::ostream& os, Fixed const& a) {
+    os << a.getRawBits();
+    return(os);
+}   

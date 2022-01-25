@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:56:38 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/01 19:11:59 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/25 15:04:23 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 
 int main(void)
 {
-    Fixed a;
-    Fixed b(a);
     Fixed c;
+    Fixed b;
 
-    // b.setRawBits(42);
+    c.setRawBits(42);
 
-    c = b;
+    b = c; // copy using assignation operator using getRawBits() 
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+    std::cout << c << std::endl;
+    std::cout << b << std::endl;
+    
+
+    //std::cout << a.getRawBits() << std::endl;
+    // std::cout << b.getRawBits() << std::endl;
+    //std::cout << c.getRawBits() << std::endl;
 
     return 0;
 }
