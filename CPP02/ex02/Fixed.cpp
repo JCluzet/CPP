@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:58:44 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/03 00:21:52 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/25 16:01:41 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 # include "Fixed.hpp"
 
 Fixed::Fixed(const int n){
-    std::cout << "Int constructor called" << std::endl;
+    std::cout << "Int constructor called with   : " << n << std::endl;
     this->fixed_pt = n << this->bits;
 }
 
-Fixed::Fixed(const float n)
-{
-    std::cout << "Float constructor called" << n << std::endl;
+Fixed::Fixed(const float n) {
+    std::cout << "Float constructor called with : " << n << std::endl;
     this->fixed_pt = roundf(n * (1 << this->bits));
 }
 

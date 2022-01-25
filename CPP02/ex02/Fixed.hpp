@@ -6,13 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:59:06 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/03 00:21:19 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/25 15:26:34 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
-
+# pragma once
 # include <iostream>
 
 class Fixed
@@ -52,10 +50,7 @@ class Fixed
         static Fixed const& min(Fixed const& a, Fixed const& b);
         static Fixed const& max(Fixed const& a, Fixed const& b);
         static Fixed& min(Fixed& a, Fixed& b);
-        static Fixed& max(Fixed& a, Fixed& b);
-        
+        static Fixed& max(Fixed& a, Fixed& b); 
 };
 
 std::ostream&	operator<<(std::ostream & ostream, Fixed const & src);
-
-#endif
