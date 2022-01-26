@@ -6,12 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:57:24 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 22:15:31 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 17:29:04 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
-#include <iomanip>
 
 DiamondTrap::~DiamondTrap() {
     std::cout << "DiamondTrap destructor called" << std::endl;

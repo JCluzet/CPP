@@ -6,11 +6,10 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 22:06:47 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 17:28:56 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "DiamondTrap.hpp"
 
 int main(void) {
