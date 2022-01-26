@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 17:47:11 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 18:51:19 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int main(void)
 {
-    FragTrap u("u");
-    
-    FragTrap b(u);
+    FragTrap b("b");
+    ScavTrap s("s");
+    ClapTrap c("c");
 
     b.highFivesGuys();
 
