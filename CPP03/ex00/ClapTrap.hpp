@@ -6,13 +6,12 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:01:42 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:38:53 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 17:49:36 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
-#include <iostream>
+# pragma once
+# include <iostream>
 
 class ClapTrap
 {
@@ -30,5 +29,3 @@ class ClapTrap
         int _energy_points;
         int _attack_damage;
 };
-
-#endif

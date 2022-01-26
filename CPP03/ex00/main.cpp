@@ -6,11 +6,10 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/04 17:27:16 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 17:42:12 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ClapTrap.hpp"
 
 int main(void)
@@ -24,4 +23,5 @@ int main(void)
     b.attack("humain");
     c.takeDamage(8);
     c.beRepaired(10);
+    return(0);
 }
