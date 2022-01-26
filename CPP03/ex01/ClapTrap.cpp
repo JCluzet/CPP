@@ -10,11 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ClapTrap.hpp"
-
-// Constructeur de copie
-
+#include <iostream>
 
 ClapTrap::ClapTrap(ClapTrap const& other) : _name(other._name), _hitpoints(other._hitpoints), _energy_points(other._attack_damage), _attack_damage(other._attack_damage) {
     std::cout << "ClapTrap Copy Constructor called" << std::endl;

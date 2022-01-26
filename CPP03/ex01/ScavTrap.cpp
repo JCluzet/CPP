@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 17:55:57 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 21:04:12 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 17:55:51 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ ScavTrap::~ScavTrap() {
     std::cout << "ScavTrap destructor called" << std::endl;
 }
 
-// ScavTrap::ScavTrap(ScavTrap const& other) {
-//     std::cout << "ScavTrap copy constructor called" << std::endl;
-//     this->_name = other._name;
-//     this->_hitpoints = other._hitpoints;
-//     this->_energy_points = other._energy_points;
-//     this->_attack_damage = other._attack_damage;
-// }
+ScavTrap::ScavTrap(ScavTrap const& other): ClapTrap(other) {
+    std::cout << "ScavTrap copy constructor called" << std::endl;
+    this->_name = other._name;
+    this->_hitpoints = other._hitpoints;
+    this->_energy_points = other._energy_points;
+    this->_attack_damage = other._attack_damage;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     std::cout << "ScavTrap constructor called" << std::endl;
@@ -41,7 +41,6 @@ ScavTrap& ScavTrap::operator=(ScavTrap const& src) {
     return(*this);
 }
 
-void ScavTrap::guardGate()
-{
+void ScavTrap::guardGate() {
     std::cout << "ScavTrap have enttered in Gate Keeper Mode" << std::endl;
 }
