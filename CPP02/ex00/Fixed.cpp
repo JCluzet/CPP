@@ -6,11 +6,10 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:58:44 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/25 15:00:53 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 01:22:48 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <iostream>
 # include "Fixed.hpp"
 
 Fixed::Fixed(Fixed const& other) {
