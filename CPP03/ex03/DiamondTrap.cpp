@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:57:24 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 17:29:04 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 18:56:26 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap const& src) {
     return(*this);
 }
 
-void DiamondTrap::whoAmI()
-{
+void DiamondTrap::whoAmI() {
     std::cout << "I am " << this->_name << " DiamondTrap and ClapTrap named " << this->ClapTrap::_name << std::endl;
 }
