@@ -6,13 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:20:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 22:00:49 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 18:41:25 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
-
+#pragma once
 #include <iostream>
 #include "ClapTrap.hpp"
 
@@ -26,5 +24,3 @@ class FragTrap : virtual public ClapTrap
 
         void highFivesGuys();
 };
-
-#endif

@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:23:17 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 17:29:00 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 18:41:07 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ FragTrap& FragTrap::operator=(FragTrap const& src) {
     return(*this);
 }
 
-void FragTrap::highFivesGuys()
-{
+void FragTrap::highFivesGuys() {
     std::cout << "This is an HighFive from FragTrap" << std::endl;
 }

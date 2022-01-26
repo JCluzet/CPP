@@ -6,13 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:50:44 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/07 22:04:39 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/26 18:40:50 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
-
+#pragma once
 #include <iostream>
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
@@ -33,5 +31,3 @@ class DiamondTrap : public FragTrap, public ScavTrap
     private:
         std::string _name;
 };
-
-#endif
