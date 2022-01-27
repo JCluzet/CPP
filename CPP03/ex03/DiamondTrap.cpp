@@ -6,11 +6,18 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:57:24 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 18:56:26 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/28 00:40:03 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap() : ClapTrap("_clap_name"), FragTrap(), ScavTrap() {
+    std::cout << "DiamondTrap default constructor" << std::endl;
+    this->_hitpoints = 100;
+    this->_energy_points = 50;
+    this->_attack_damage = 30;
+}
 
 DiamondTrap::~DiamondTrap() {
     std::cout << "DiamondTrap destructor called" << std::endl;
@@ -24,9 +31,8 @@ DiamondTrap::DiamondTrap(DiamondTrap const& other) : ClapTrap(other), FragTrap(o
     this->_attack_damage = other._attack_damage;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), ScavTrap(name + "_clap_name") {
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name + "_clap_name"), ScavTrap(name) {
     std::cout << "DiamondTrap constructor called" << std::endl;
-    this->_name = name;
     this->_hitpoints = 100;
     this->_energy_points = 50;
     this->_attack_damage = 30;
@@ -42,5 +48,5 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap const& src) {
 }
 
 void DiamondTrap::whoAmI() {
-    std::cout << "I am " << this->_name << " DiamondTrap and ClapTrap named " << this->ClapTrap::_name << std::endl;
+    std::cout << "I am DiamondTrap and ClapTrap named " << this->ClapTrap::_name << std::endl;
 }

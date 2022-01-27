@@ -6,30 +6,49 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 19:08:09 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/28 00:38:56 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-int main(void) {
+int main(void)
+{
+    // ScavTrap a("HectorScav");
+
+    // std::cout << std::endl;
+    
+    // ClapTrap b("HelloClap");
+    // a.attack("bidule");
+    // a.guardGate();
+    // a.beRepaired(10);
+
+    // std::cout << std::endl;
+
+    // FragTrap y("FRAGO");
+    // y.attack("bidule");
+    // y.beRepaired(10);
+
+    // std::cout << std::endl;
+    
+    // a.attack("OTHER");
+
+    // b.takeDamage(8);
+    // b.beRepaired(10);
+
+    // std::cout << std::endl;
+
+    // b.attack("HelloClap");
+
+    std::cout << std::endl;
+
     DiamondTrap d1("bistouflex");
+    d1.whoAmI();
+
     std::cout << std::endl;
-    
-    ScavTrap b("Clapp");
+
+    d1.attack("other");
+
     std::cout << std::endl;
-    d1.attack("yo attacked");
-    std::cout << std::endl;
-    
-    // DiamondTrap c1("bistouflex");
-    // c1.whoAmI();
-    // std::cout << c1._hitpoints << std::endl;
-    // std::cout << c1._energy_points << std::endl;
-    // std::cout << c1._attack_damage << std::endl;
-    // c1.attack("hello");
-    // c1.takeDamage(50);
-    // c1.beRepaired(30);
-    // c1.guardGate();
-    // c1.highFivesGuys();
-    return 0;
+    return(0);
 }
