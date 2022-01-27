@@ -12,16 +12,17 @@ NAME        := scavtrap
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
+
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
-SRCS        :=      ClapTrap.cpp \
+SRCS        :=      ScavTrap.cpp \
+				ClapTrap.cpp \
 				main.cpp \
-				ScavTrap.cpp \
 				
-OBJS        := $(SRCS:.c=.o)
-.c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+OBJS        := ${SRCS:.cpp=.o}
+.cpp.o:
+	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 
 
