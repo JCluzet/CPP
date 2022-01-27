@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 18:51:19 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/27 23:38:52 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,32 @@
 
 int main(void)
 {
-    FragTrap b("b");
-    ScavTrap s("s");
-    ClapTrap c("c");
+    ScavTrap a("HectorScav");
 
-    b.highFivesGuys();
+    std::cout << std::endl;
+    
+    ClapTrap b("HelloClap");
+    a.attack("bidule");
+    a.guardGate();
+    a.beRepaired(10);
+
+    std::cout << std::endl;
+
+    FragTrap y("FRAGO");
+    y.attack("bidule");
+    y.beRepaired(10);
+
+    std::cout << std::endl;
+    
+    a.attack("OTHER");
 
     b.takeDamage(8);
     b.beRepaired(10);
+
+    std::cout << std::endl;
+
+    b.attack("HelloClap");
+
+    std::cout << std::endl;
     return(0);
 }

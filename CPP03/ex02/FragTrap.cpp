@@ -6,11 +6,15 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 21:23:17 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/26 18:33:57 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/27 23:35:06 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap(): ClapTrap() {
+    std::cout << "ScavTrap Default constructor called" << std::endl;
+}
 
 FragTrap::~FragTrap() {
     std::cout << "FragTrap destructor called" << std::endl;
@@ -44,4 +48,13 @@ FragTrap& FragTrap::operator=(FragTrap const& src) {
 void FragTrap::highFivesGuys()
 {
     std::cout << "This is an HighFive from FragTrap" << std::endl;
+}
+
+void FragTrap::attack(std::string const & target) {
+    if (_energy_points == 0 )
+        std::cout << "FragTrap " << this->_name << " can't attack because _energy_points == 0" << std::endl;
+    else if (_hitpoints == 0)
+        std::cout << "FragTrap " << this->_name << " can't attack because _hitpoints == 0" << std::endl;
+    else
+        std::cout << "FragTrap " << this->_name << " attack " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
 }

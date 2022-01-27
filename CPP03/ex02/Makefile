@@ -8,21 +8,21 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := scavtrap
+NAME        := fragtrap
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
-SRCS        :=      ClapTrap.cpp \
-				FragTrap.cpp \
+SRCS        :=      ScavTrap.cpp \
+				ClapTrap.cpp \
 				main.cpp \
-				ScavTrap.cpp \
+				FragTrap.cpp \
 				
-OBJS        := $(SRCS:.c=.o)
-.c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+OBJS        := ${SRCS:.cpp=.o}
+.cpp.o:
+	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 
 
