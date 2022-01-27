@@ -18,9 +18,9 @@ FLAGS    := -Wall -Wextra -Werror -std=c++98
 SRCS        :=      ClapTrap.cpp \
 				main.cpp \
 				
-OBJS        := $(SRCS:.c=.o)
-.c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+OBJS        := $(SRCS:.cpp=.o)
+.cpp.o:
+	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 
 
