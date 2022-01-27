@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:22:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/28 00:38:56 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/28 00:46:03 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,30 @@ int main(void)
 
     // std::cout << std::endl;
     
-    // ClapTrap b("HelloClap");
+    ClapTrap b("HelloClap");
     // a.attack("bidule");
     // a.guardGate();
     // a.beRepaired(10);
 
-    // std::cout << std::endl;
+    std::cout << std::endl;
 
-    // FragTrap y("FRAGO");
-    // y.attack("bidule");
-    // y.beRepaired(10);
+    FragTrap y("FRAGO");
+    y.attack("bidule");
+    y.beRepaired(10);
 
-    // std::cout << std::endl;
+    std::cout << std::endl;
     
-    // a.attack("OTHER");
+    b.attack("OTHER");
 
-    // b.takeDamage(8);
-    // b.beRepaired(10);
+    b.takeDamage(8);
+    b.beRepaired(10);
 
-    // std::cout << std::endl;
+    std::cout << std::endl;
 
-    // b.attack("HelloClap");
+    b.attack("HelloClap");
 
+    std::cout << std::endl;
+    std::cout << std::endl;
     std::cout << std::endl;
 
     DiamondTrap d1("bistouflex");
