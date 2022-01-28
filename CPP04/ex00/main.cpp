@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:26:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:07:08 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/28 20:57:43 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,4 @@ int main(void)
     metab->makeSound();
     delete jb;
     delete metab;
-
-    Animal* array = 
 }
