@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:04 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:09:08 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 20:35:28 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Dog& Dog::operator=(Dog const& src)
 {
     std::cout << "Assignation Dog operator called" << std::endl;
     this->_type = src._type;
-    this->_brain = src._brain;
+    this->_brain = new Brain(*src._brain);
     return (*this);
 }
 

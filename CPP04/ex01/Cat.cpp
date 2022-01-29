@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:04 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:05:13 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 20:35:36 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Cat& Cat::operator=(Cat const& src)
 {
     std::cout << "Assignation Cat operator called" << std::endl;
     this->_type = src._type;
-    this->_brain = src._brain;
+    this->_brain = new Brain(*src._brain);
     return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:26:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/29 18:39:58 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 20:45:29 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,21 +44,31 @@
 
 int main(void)
 {
-    Animal *(j[100]);
-    for (int i = 0; i < 50; i++)
+    Animal *(j[10]);
+    for (int i = 0; i < 5; i++)
     {
+        std::cout << std::endl;
         j[i] = new Dog();
+        std::cout << std::endl;
     }
-    for (int i = 50; i < 100; i++)
+    for (int i = 5; i < 10; i++)
     {
-        j[i] = new Cat();
+        j[i] = j[i - 5];
     }
-    for (int i = 0; i < 100; i++)
+    for (int i = 5; i < 10; i++)
+    {
+        std::cout << std::endl;
+        j[i] = new Cat();
+        std::cout << std::endl;
+    }
+    for (int i = 0; i < 10; i++)
     {
         j[i]->makeSound();
     }
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 10; i++)
     {
+        std::cout << std::endl;
         delete j[i];
+        std::cout << std::endl;
     }
 }
