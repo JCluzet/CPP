@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:14:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 02:15:34 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 16:19:16 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ std::string WrongAnimal::getType() const
 WrongAnimal::WrongAnimal()
 {
     std::cout << "WrongAnimal constructor" << std::endl;
+    this->_type = "WrongAnimal";
 }
 
 WrongAnimal::~WrongAnimal()

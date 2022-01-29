@@ -6,13 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:40 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 01:11:45 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 15:40:10 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
-
+#pragma once
 #include <iostream>
 #include "Animal.hpp"
 
@@ -25,6 +23,3 @@ class Cat : public Animal
         Cat& operator=(Cat const& src);
         virtual void makeSound() const;
 };
-
-#endif
-

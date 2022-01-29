@@ -6,12 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:15:16 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 02:12:12 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 15:39:11 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONG_ANIMAL_HPP
-# define WRONG_ANIMAL_HPP
+#pragma once
 #include <iostream>
 
 class WrongAnimal {
@@ -25,5 +24,3 @@ class WrongAnimal {
     protected:
         std::string _type;
 };
-
-#endif
