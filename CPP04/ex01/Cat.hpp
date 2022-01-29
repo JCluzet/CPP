@@ -6,13 +6,11 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:40 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:25:41 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 16:23:51 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
-
+#pragma once
 #include <iostream>
 #include "Animal.hpp"
 #include "Brain.hpp"
@@ -28,6 +26,4 @@ class Cat : public Animal
     private:
         Brain* _brain;
 };
-
-#endif
 

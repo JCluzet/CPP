@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:26:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:34:49 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 18:34:46 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,28 @@
 #include "WrongCat.hpp"
 
 int main(void) {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    delete j;//should not create a leak
-    delete i;
-    system("leaks animal");
+    std::cout << std::endl;
+    Animal *bernard = new Animal[100];
+    std::cout << std::endl;
+	for(int i = 0; i < 50; i++)
+    {
+        std::cout << "Dog : " << std::endl << std::endl;
+		bernard[i] = Dog();
+        std::cout << std::endl;
+    }
+    for(int i = 50; i < 100; i++)
+    {
+	    bernard[i] = Cat();
+    }
+    std::cout << std::endl << std::endl;
+    Animal *woof = new Animal[1];
+
+    std::cout << std::endl << std::endl;
+    woof[0] = Dog();
+
+    std::cout << std::endl << std::endl;
+    delete [] woof;
+    std::cout << std::endl << std::endl;
+	delete [] bernard;
+	return 0;
 }

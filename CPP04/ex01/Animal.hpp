@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:15:16 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 01:43:12 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/29 16:23:39 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#pragma once
 #include <iostream>
 
 class  Animal {
@@ -25,5 +24,3 @@ class  Animal {
     protected:
         std::string _type;
 };
-
-#endif
