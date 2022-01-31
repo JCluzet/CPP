@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:40 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/29 16:24:04 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/31 02:34:59 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Dog : public Animal
 {
     public:
         Dog();
-        ~Dog();
+        virtual ~Dog();
         Dog(Dog const& other);
         Dog& operator=(Dog const& src);
         virtual void makeSound() const;

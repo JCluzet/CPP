@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:04 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:05:13 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/31 03:51:13 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ Cat::Cat() : _brain(new Brain()) {
 
 Cat::~Cat()
 {
-    delete _brain;
     std::cout << "Cat destructor" << std::endl;
+    delete _brain;
 }
 
 Cat::Cat(Cat const& other) : _brain(new Brain(*other._brain)) {
@@ -33,8 +33,9 @@ Cat::Cat(Cat const& other) : _brain(new Brain(*other._brain)) {
 Cat& Cat::operator=(Cat const& src)
 {
     std::cout << "Assignation Cat operator called" << std::endl;
+    delete _brain;
     this->_type = src._type;
-    this->_brain = src._brain;
+    this->_brain = new Brain(*src._brain);
     return (*this);
 }
 

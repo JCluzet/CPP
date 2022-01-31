@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.cpp                                         :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:14:53 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/08 01:45:22 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/31 02:19:20 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ std::string Animal::getType() const
     return _type;
 }
 
-Animal::Animal()
+Animal::Animal() : _type("Animal")
 {
     std::cout << "Animal constructor" << std::endl;
 }

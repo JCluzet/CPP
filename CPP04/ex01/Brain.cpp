@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 02:22:19 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/12 19:24:58 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/31 02:51:46 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include "Brain.hpp"
 
 Brain::Brain() {
-    std::cout << "Brain constructor called" << std::endl;
+    std::cout << "Brain constructor" << std::endl;
 }
 
 Brain::~Brain() {
-    std::cout << "Brain destructor called" << std::endl;
+    std::cout << "Brain destructor" << std::endl;
 }
 
 Brain::Brain(Brain const& other) {
-    std::cout << "Brain copy constructor called" << std::endl;
+    std::cout << "Brain copy constructor" << std::endl;
     for (int i = 0; i < 100; i++)
         this->_ideas[i] = other._ideas[i];
 }

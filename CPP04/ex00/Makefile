@@ -10,7 +10,7 @@
 
 NAME        := animal
 CC         := c++
-FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+FLAGS    := -Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
 
 
 ################################################################################

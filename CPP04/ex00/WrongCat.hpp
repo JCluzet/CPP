@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:40 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/29 15:39:25 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/31 02:27:00 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class WrongCat : public WrongAnimal
 {
     public:
         WrongCat();
-        ~WrongCat();
+        virtual ~WrongCat();
         WrongCat(WrongCat const& other);
         WrongCat& operator=(WrongCat const& src);
         virtual void makeSound() const;

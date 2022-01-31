@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 00:29:04 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/29 21:14:43 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/01/31 03:22:23 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ Dog::Dog() : _brain(new Brain) {
 
 Dog::~Dog()
 {
-    delete _brain;
     std::cout << "Dog destructor" << std::endl;
+    delete _brain;
 }
 
 Dog::Dog(Dog const& other) : _brain(new Brain(*other._brain )){
@@ -33,6 +33,7 @@ Dog::Dog(Dog const& other) : _brain(new Brain(*other._brain )){
 Dog& Dog::operator=(Dog const& src)
 {
     std::cout << "Assignation Dog operator called" << std::endl;
+    delete _brain;
     this->_type = src._type;
     this->_brain = new Brain(*src._brain);
     return (*this);
