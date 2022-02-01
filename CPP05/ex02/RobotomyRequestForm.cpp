@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 01:52:45 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/16 21:18:52 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/01 15:39:50 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,9 @@ void RobotomyRequestForm::execute(Bureaucrat const &src) const {
         std::cout << this->getTarget() + " has been robotomized successfully" << std::endl;
     else
         std::cout << this->getTarget() + " has failed to be robotomized" << std::endl;
+}
+
+std::ostream& operator<<(std::ostream &o, const RobotomyRequestForm &src) {
+    o << "Form " << src.getName() << " with grade " << src.getSignGrade() << " and " << src.getExecGrade() << std::endl;
+    return o;
 }

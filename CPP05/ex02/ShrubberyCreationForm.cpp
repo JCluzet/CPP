@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 01:52:45 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/16 21:17:25 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/01 15:39:45 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const &src) const {
     file << "         |  |          " << std::endl;
     file << "  ______/____\\____    " << std::endl;
     file.close();
+}
+
+std::ostream& operator<<(std::ostream &o, const ShrubberyCreationForm &src) {
+    o << "Form " << src.getName() << " with grade " << src.getSignGrade() << " and " << src.getExecGrade() << std::endl;
+    return o;
 }

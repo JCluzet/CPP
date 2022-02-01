@@ -15,12 +15,12 @@ FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
-SRCS        :=      Form.cpp \
+SRCS        :=      Bureaucrat.cpp \
+				Form.cpp \
+				main.cpp \
+				PresidentialPardonForm.cpp \
 				RobotomyRequestForm.cpp \
 				ShrubberyCreationForm.cpp \
-				Bureaucrat.cpp \
-				PresidentialPardonForm.cpp \
-				main.cpp \
 				
 OBJS        := $(SRCS:.c=.o)
 .c.o:
@@ -51,7 +51,7 @@ all:		${NAME}
 bonus:		all
 
 clean:
-			@ ${RM} *.o
+			@ ${RM} *.o */*.o */*/*.o
 			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:		clean
