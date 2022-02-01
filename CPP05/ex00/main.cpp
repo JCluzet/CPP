@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 20:22:01 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/01 03:04:33 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/01 03:05:55 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,20 +85,4 @@ int main(void)
     std::cout << RESET << std::endl << "----- Bureaucrat -----" << std::endl << std::endl;
     return(0);
 }
-
-// int main(void) {
-//     try{
-//         Bureaucrat  john("john", 149);
-//         john.decrementGrade();
-//         std::cout << "Current Grade : " << john.getGrade() << std::endl;
-//         john.decrementGrade();
-//         std::cout << "Current Grade : " << john.getGrade() << std::endl;
-//         john.decrementGrade();
-//     }
-//     catch (std::exception &e){
-// 		std::cerr << e.what() << std::endl;
-// 	}
-//     return 0;
-// }
-
 
