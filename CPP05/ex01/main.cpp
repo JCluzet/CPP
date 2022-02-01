@@ -68,7 +68,7 @@ int main(void)
 
 
     std::cout << "-----------------------------"<< std::endl;
-    std::cout << std::endl << MAGENTA << "Creation bureaucrat dann lvl3" << YELLOW << " using a try and catch : "<< RESET << std::endl;
+    std::cout << std::endl << MAGENTA << "Creation bureaucrat dann lvl2" << YELLOW << " using a try and catch : "<< RESET << std::endl;
     Bureaucrat dann("dann",2);
     std::cout << std::endl << MAGENTA << "Creation of 3-sign | 12-exec form" << YELLOW << " using a try and catch : "<< RESET << std::endl;
     
