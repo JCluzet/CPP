@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 20:22:01 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/01 03:22:43 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/01 14:34:54 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ int main(void)
         std::cerr << RED << "Output of Exception:  " << RESET << e.what() << std::endl;
     }
     std::cout << std::endl << std::endl << "-----------------------------"<< std::endl;
-
+    std::cout << std::endl << std::endl << " Destructor :"<< std::endl;
 
     std::cout << std::endl;
     return(0);
