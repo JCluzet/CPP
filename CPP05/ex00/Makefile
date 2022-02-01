@@ -12,15 +12,16 @@ NAME        := bureaucrat
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
+
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 SRCS        :=      Bureaucrat.cpp \
 				main.cpp \
 				
-OBJS        := $(SRCS:.c=.o)
-.c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+OBJS        := ${SRCS:.cpp=.o}
+.cpp.o:
+	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 
 
@@ -47,7 +48,7 @@ all:		${NAME}
 bonus:		all
 
 clean:
-			@ ${RM} *.o
+			@ ${RM} *.o */*.o */*/*.o
 			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:		clean
