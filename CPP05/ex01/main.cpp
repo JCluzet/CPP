@@ -6,51 +6,52 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 20:22:01 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/15 20:37:25 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/01 03:22:43 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Bureaucrat.hpp"
 
-int main(void) {
-    try{
-        Bureaucrat  john("john", 140);
-        john.decrementGrade();
-        std::cout << "Current Grade : " << john.getGrade() << std::endl;
-        Form form1("form1", 138, 1);
-        Form form2("form2", -12, 1);
-        john.incrementGrade();
-        john.incrementGrade();
-        std::cout << "Current Grade : " << john.getGrade() << std::endl;
-        std::cout << form2 << std::endl;
-        john.signForm(form1);
-        // john.signForm(form2);
-    }
-    catch (std::exception &e){
-		std::cerr << e.what() << std::endl;
-	}
+#define RED "\033[0;31m"
+#define GREEN "\033[0;32m"
+#define YELLOW "\033[0;33m"
+#define MAGENTA "\033[0;35m"
+#define RESET "\033[0m"
 
-    try{
-        Form form3("form3", 190, 1);
-        std::cout << form3 << std::endl;
+int main(void)
+{
+    std::cout << std::endl << GREEN << "Constructor : " << YELLOW << std::endl;
+    Bureaucrat c("john", 149);
+
+    std::cout << std::endl << MAGENTA << "Call of decrementGrade" << YELLOW << " using a try and catch"<< RESET << std::endl;
+    
+    try {
+        c.decrementGrade();
     }
-    catch (std::exception &e){
-        std::cerr << e.what() << std::endl;
+    catch (std::exception &e) {
+        std::cerr << RED << "Output of Exception:  " << RESET << e.what() << std::endl;
     }
-    return 0;
+
+    std::cout << std::endl << MAGENTA << "Creation of 151-sign | 130-exec form" << YELLOW << " using a try and catch : "<< RESET << std::endl;
+    
+    try {
+        Form("johhny", 151, 130);
+    }
+    catch (std::exception &e) {
+        std::cerr << RED << "Output of Exception:  " << RESET << e.what() << std::endl;
+    }
+    std::cout << std::endl << MAGENTA << "Creation of 3-sign | 12-exec form" << YELLOW << " using a try and catch : "<< RESET << std::endl;
+    
+    try {
+        Form form1("johhny", 3, 12);
+        std::cout << std::endl << MAGENTA << "Use of overloader : " << RESET;
+        std::cout << form1 << std::endl;
+    }
+    catch (std::exception &e) {
+        std::cerr << RED << "Output of Exception:  " << RESET << e.what() << std::endl;
+    }
+    std::cout << std::endl;
+    return(0);
 }
-
-// int main(void) {
-//     try{
-//         Bureaucrat josh("josh", 10);
-//         Form document1("document1", 9, 50);
-//         josh.signForm(document1);
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << e.what() << std::endl;
-//     }
-//     return 0;
-// }
 

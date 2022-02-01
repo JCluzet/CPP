@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 20:23:09 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/15 20:08:50 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/01 03:08:15 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
         throw Bureaucrat::GradeTooLowException();
     this->_grade = grade;
     std::cout << "Bureaucrat " << this->_name << " created with grade " << this->_grade << std::endl;
+}
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& src) {
+    os << src.getName() << ", bureaucrat grade " << src.getGrade();
+    return os;
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &src) {
