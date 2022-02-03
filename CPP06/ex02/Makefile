@@ -8,7 +8,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := convert
+NAME        := base
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
@@ -16,8 +16,7 @@ FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
-SRCS        :=      Convert.cpp \
-				main.cpp \
+SRCS        :=      main.cpp \
 				
 OBJS        := ${SRCS:.cpp=.o}
 .cpp.o:

@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 20:09:26 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/02 21:02:47 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/03 01:27:17 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 class Data
 {
     public:
-
         Data(void);
         Data(std::string str);
         Data(Data const & src);
