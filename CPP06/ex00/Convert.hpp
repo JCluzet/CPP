@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:51:06 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/24 23:41:58 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/03 16:08:35 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 class Convert
 {
     public:
-
+        Convert();
         Convert(std::string av);
         Convert(Convert const & src);
         ~Convert(void);

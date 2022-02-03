@@ -10,7 +10,7 @@
 
 NAME        := convert
 CC         := c++
-FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+FLAGS    := -Wall -Wextra -Werror -std=c++98
 
 
 ################################################################################

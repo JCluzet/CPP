@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:31:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/24 23:42:13 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/03 16:06:45 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,13 @@ int main(int argc, char **argv)
         std::cout << "Usage: ./cast <nb>" << std::endl;
         return (1);
     }
-    Convert c(argv[1]);
-    char i1;
-    i1 = static_cast<char>(c);
-    int i;
-    i = static_cast<int>(c);
-    float i2;
-    i2 = static_cast<float>(c);
-    double i3;
-    i3 = static_cast<double>(c);
+
+    Convert conv(argv[1]);
+
+    (void)static_cast<char>(conv);
+    (void)static_cast<int>(conv);
+    (void)static_cast<float>(conv);
+    (void)static_cast<double>(conv);
 
     return (0);
 }

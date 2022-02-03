@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:51:40 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/01/24 23:47:54 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/03 16:09:17 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include <limits>
 
 Convert::Convert(std::string av): _av(av) {
+}
+
+Convert::Convert(): _av("0") {
 }
 
 Convert::Convert(Convert const & src) {
