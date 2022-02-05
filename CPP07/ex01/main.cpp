@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 20:07:55 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/05 15:48:49 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/05 15:51:12 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void display(T const & elem)
 
 int main(void)
 {
-    char tab[10];
+    int tab[10]; // can change the type here
     
     int len = 10;
     for(int i = 0; i < len; i++)
