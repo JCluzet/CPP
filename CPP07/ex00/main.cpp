@@ -6,44 +6,17 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 19:34:27 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/04 20:05:27 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/05 18:35:09 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "whatever.hpp"
 #include <iostream>
-
-template <typename T>
-void swap(T &a, T &b)
-{
-    T tmp;
-
-    tmp = a;
-    a = b;
-    b = tmp;
-}
-
-template <typename T>
-T min(const T a, const T b)
-{
-    if (a < b)
-        return (a);
-    else
-        return (b);
-}
-
-template <typename T>
-T max(const T a, const T b)
-{
-    if (a > b)
-        return (a);
-    else
-        return (b);
-}
 
 int main(void)
 {
-    int a = 2;
-    int b = 3;
+    int a = 67;
+    int b = 68;
     ::swap(a, b);
     std::cout << "a = " << a << ", b = " << b << std::endl;
     std::cout << "min( a, b ) = " << ::min(a, b) << std::endl;
