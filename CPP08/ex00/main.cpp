@@ -6,10 +6,9 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:23:31 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 03:32:39 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/08 04:06:40 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <iostream>
 #include <vector>
@@ -24,10 +23,10 @@ int main()
         tab.push_back(i);
     
 
-    std::cout << "Try to find 7 : " << std::endl;
+    std::cout << "Try to find 8 : " << std::endl;
     try
     {
-        easyfind(tab, 9);
+        easyfind(tab, 8);
     }
     catch (std::exception &e)
     {
@@ -35,10 +34,10 @@ int main()
     }
 
     std::cout << std::endl;
-    std::cout << "Try to find 14 :" << std::endl;
+    std::cout << "Try to find 10 :" << std::endl;
     try
     {
-        easyfind(tab, 14);
+        easyfind(tab, 10);
     }
     catch (std::exception &e)
     {
