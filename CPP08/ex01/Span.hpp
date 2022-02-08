@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:36:59 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 03:56:23 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/08 22:26:45 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ class Span
         Span &operator=(Span const &rhs);
         void addNumber(int n);
         unsigned int shortestSpan(void);
-        unsigned int longestSpan(void);
+        unsigned int longestSpan(void) const;
 };

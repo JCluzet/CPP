@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 04:02:08 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 04:05:12 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/08 22:49:29 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,25 @@
 int main()
 {
     Span s(5);
+    s.addNumber(30);
+    s.addNumber(10);
+    s.addNumber(425);
     s.addNumber(1);
-    s.addNumber(2);
-    s.addNumber(3);
-    s.addNumber(4);
+    std::cout << "Tab : { 30, 10, 425, 1 }" << std::endl;
+    
+    std::cout << "Shortest Span: " << s.shortestSpan() << std::endl;
+    std::cout << "Longest Span: " << s.longestSpan() << std::endl;
+
+    Span a(5);
+    a.addNumber(31);
+    a.addNumber(5);
+    a.addNumber(-10000);
+    a.addNumber(1000);
+
+    std::cout << std::endl << "Tab : { 1, 3, 5, 987 }" << std::endl;
+    
+    std::cout << "Shortest Span: " << a.shortestSpan() << std::endl;
+
+    std::cout << "Longest Span: " << a.longestSpan() << std::endl;
     return(0);
 }

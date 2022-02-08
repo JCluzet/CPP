@@ -6,12 +6,15 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:47:10 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 04:04:44 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/08 22:45:58 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <iostream>
+#include <algorithm>
+#include <iterator>
+#include <vector>
 
 Span::~Span(void)
 {
@@ -22,7 +25,8 @@ Span::Span(Span const &src)
     *this = src;
 }
 
-Span::Span() : _size(0), _tab() {
+Span::Span() : _size(0), _tab()
+{
     std::cout << "Default constructor" << std::endl;
 }
 
@@ -49,10 +53,25 @@ Span &Span::operator=(Span const &rhs)
 
 unsigned int Span::shortestSpan(void)
 {
-    return(0);
+    unsigned int shortest = _tab[1] - _tab[0];
+    unsigned int distance = 0;
+
+    std::vector<int> temp = _tab;
+    if (_size < 2)
+        throw std::exception();
+    std::sort(temp.begin(), temp.end());
+    for (unsigned int i = 1; i < temp.size(); i++)
+    {
+        distance = temp[i] - temp[i - 1];
+        if (distance < shortest)
+            shortest = distance;
+    }
+    return (shortest);
 }
 
-unsigned int Span::longestSpan(void)
-{
-    return(0);
+
+unsigned int     Span::longestSpan(void) const {
+    if (_tab.size() <= 1)
+		throw(std::out_of_range("Not enough elements for a span"));
+	return (*std::max_element(_tab.begin(), _tab.end()) - *std::min_element(_tab.begin(), _tab.end()));
 }
