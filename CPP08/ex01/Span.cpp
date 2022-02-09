@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:47:10 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/09 02:32:53 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 06:19:58 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,11 @@ Span &Span::operator=(Span const &rhs)
     return (*this);
 }
 
+std::vector<int> Span::getvec(void) const
+{
+    return (_tab);
+}
+
 unsigned int Span::shortestSpan(void)
 {
     unsigned int shortest = _tab[1] - _tab[0];
@@ -76,8 +81,9 @@ unsigned int     Span::longestSpan(void) const {
 	return (*std::max_element(_tab.begin(), _tab.end()) - *std::min_element(_tab.begin(), _tab.end()));
 }
 
-void addmultinumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    std::copy(begin, end, std::back_inserter(_tab));
-    return (shortest);
+    if (_size - _tab.size() < std::distance(begin, end))
+        throw std::exception();
+    _tab.insert(_tab.end(), begin, end);
 }

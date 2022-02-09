@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 04:02:08 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/09 02:38:01 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 06:26:01 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    Span s(5);
+    Span s(11);
     s.addNumber(30);
     s.addNumber(10);
     s.addNumber(425);
@@ -43,8 +43,33 @@ int main()
 
     std::cout << "Longest Span: " << a.longestSpan() << std::endl;
 
-    // create iterator from Span
+    // call addNumber with a vector of int
+    std::vector<int> v;
+    v.push_back(1);
+    v.push_back(3);
+    v.push_back(5);
+    v.push_back(987);
 
-    //a.addmultinumber(b.begin(), b.end());
+    try {
+    std::cout << std::endl << "Tab : { 1, 3, 5, 987 }" << std::endl;
+    s.addNumber(v.begin(), v.end());
+    // print tab s 
+    for (int i = 0; i < s.getvec().size(); i++)
+        std::cout << s.getvec()[i] << " ";
+    }
+    catch (std::exception &e) {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
+
+    try {
+    std::cout << std::endl << "Tab : { 30, 10, 425, 1, 1, 3, 5, 987 }" << std::endl;
+    s.addNumber(v.begin(), v.end());
+    // print tab s 
+    for (int i = 0; i < s.getvec().size(); i++)
+        std::cout << s.getvec()[i] << " ";
+    }
+    catch (std::exception &e) {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
     return(0);
 }
