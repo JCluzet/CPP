@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 23:43:09 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/09 02:23:43 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 02:26:49 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,93 +19,96 @@
 #include <iostream>
 #include <list>
 
-// int main()
-// {
-//     MutantStack<int> stac;
+int main()
+{
+    MutantStack<int> stac;
 
-//     stac.push(1);
-//     stac.push(76);
-//     stac.push(33);
+    stac.push(1);
+    stac.push(76);
+    stac.push(33);
 
-//     std::cout << MAGENTA << "stac.top()  = " << RESET << stac.top() << std::endl;
+    std::cout << MAGENTA << "stac.top()  = " << RESET << stac.top() << std::endl;
 
-//     stac.pop();
+    stac.pop();
 
-//     std::cout << MAGENTA << "stac.size() = " << RESET << stac.size() << std::endl;
+    std::cout << MAGENTA << "stac.size() = " << RESET << stac.size() << std::endl;
 
-//     stac.push(13);
-//     stac.push(21);
-//     stac.push(4);
-//     stac.push(53);
+    stac.push(13);
+    stac.push(21);
+    stac.push(4);
+    stac.push(53);
 
-//     MutantStack<int>::iterator it = stac.begin();
-//     MutantStack<int>::iterator ite = stac.end();
+    MutantStack<int>::iterator it = stac.begin();
+    MutantStack<int>::iterator ite = stac.end();
 
-//     std::cout << *it << std::endl;
-//     it++;
-//     std::cout << *it << std::endl;
-//     --it;
-//     std::cout << *it << std::endl;
+    std::cout << *it << std::endl;
+    it++;
+    std::cout << *it << std::endl;
+    --it;
+    std::cout << *it << std::endl;
 
-//     std::cout << YELLOW << "stack       = " << RESET;
-//     while (it != ite)
-//     {
-//         std::cout << *it;
-//         ++it;
-//         if (it != ite)
-//             std::cout << " | ";
-//     }
-//     std::cout << std::endl;
+    std::cout << YELLOW << "stack       = " << RESET;
+    while (it != ite)
+    {
+        std::cout << *it;
+        ++it;
+        if (it != ite)
+            std::cout << " | ";
+    }
+    std::cout << std::endl;
 
-//     MutantStack<int> temp;
+    MutantStack<int> temp;
 
-//     for (int i = 0; i < 800; i++)
-//         temp.push(i);
+    for (int i = 0; i < 800; i++)
+        temp.push(i);
 
-//     it = temp.begin();
-//     ite = temp.end();
+    it = temp.begin();
+    ite = temp.end();
 
-//     std::cout << YELLOW << "big stack   = " << RESET;
-//     while (it != ite)
-//     {
-//         std::cout << *it;
-//         ++it;
-//         if (it != ite)
-//             std::cout << " | ";
-//     }
-//     std::cout << std::endl;
+    std::cout << YELLOW << "big stack   = " << RESET;
+    while (it != ite)
+    {
+        std::cout << *it;
+        ++it;
+        if (it != ite)
+            std::cout << " | ";
+    }
+    std::cout << std::endl;
 
-//     for (int i = 0; i < 400; i++)
-//     {
-//         // std::cout << temp.top() << std::endl;
-//         temp.pop();
-//     }
-//     it = temp.begin();
-//     ite = temp.end();
-//     std::cout << std::endl;
-//     std::cout << YELLOW << "stack.pop() x400= " << RESET;
-//     while (it != ite)
-//     {
-//         std::cout << *it;
-//         ++it;
-//         if (it != ite)
-//             std::cout << " | ";
-//     }
-//     std::cout << std::endl;
-//     return 0;
-// }
+    for (int i = 0; i < 400; i++)
+    {
+        // std::cout << temp.top() << std::endl;
+        temp.pop();
+    }
+    it = temp.begin();
+    ite = temp.end();
+    std::cout << std::endl;
+    std::cout << YELLOW << "stack.pop() x400= " << RESET;
+    while (it != ite)
+    {
+        std::cout << *it;
+        ++it;
+        if (it != ite)
+            std::cout << " | ";
+    }
+    std::cout << std::endl;
+    return 0;
+}
+
+
+
 
 // int main()
 // {
 //     MutantStack<int> mstack;
 //     mstack.push(5);
 //     mstack.push(17);
-//     //std::cout << mstack.top() << std::endl;
+//     std::cout << mstack.top() << std::endl;
 //     mstack.pop();
-//     //std::cout << mstack.size() << std::endl;
+//     std::cout << mstack.size() << std::endl;
 //     mstack.push(3);
-//     // mstack.push(5);
-//     // mstack.push(737);
+//     mstack.push(5);
+//     mstack.push(737);
 //     MutantStack<int>::iterator it = mstack.begin();
 //     MutantStack<int>::iterator ite = mstack.end();
 //     ++it;
@@ -115,35 +118,8 @@
 //         std::cout << *it << std::endl;
 //         ++it;
 //     }
-//     //std::stack<int> s(mstack);
-//     return 0;
+//     std::stack<int> s(mstack);
 // }
-
-
-
-
-int main()
-{
-    MutantStack<int> mstack;
-    mstack.push(5);
-    mstack.push(17);
-    std::cout << mstack.top() << std::endl;
-    mstack.pop();
-    std::cout << mstack.size() << std::endl;
-    mstack.push(3);
-    mstack.push(5);
-    mstack.push(737);
-    MutantStack<int>::iterator it = mstack.begin();
-    MutantStack<int>::iterator ite = mstack.end();
-    ++it;
-    --it;
-    while (it != ite)
-    {
-        std::cout << *it << std::endl;
-        ++it;
-    }
-    std::stack<int> s(mstack);
-}
 
 // int main()
 // {
