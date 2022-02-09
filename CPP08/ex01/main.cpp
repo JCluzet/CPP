@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 04:02:08 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/09 06:26:01 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 06:29:03 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int main()
     std::cout << std::endl << "Tab : { 1, 3, 5, 987 }" << std::endl;
     s.addNumber(v.begin(), v.end());
     // print tab s 
-    for (int i = 0; i < s.getvec().size(); i++)
+    for (unsigned long int i = 0; i < s.getvec().size(); i++)
         std::cout << s.getvec()[i] << " ";
     }
     catch (std::exception &e) {
@@ -65,7 +65,7 @@ int main()
     std::cout << std::endl << "Tab : { 30, 10, 425, 1, 1, 3, 5, 987 }" << std::endl;
     s.addNumber(v.begin(), v.end());
     // print tab s 
-    for (int i = 0; i < s.getvec().size(); i++)
+    for (unsigned long int i = 0; i < s.getvec().size(); i++)
         std::cout << s.getvec()[i] << " ";
     }
     catch (std::exception &e) {

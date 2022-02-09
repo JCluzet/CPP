@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:47:10 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/09 06:19:58 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 06:27:36 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ unsigned int     Span::longestSpan(void) const {
 
 void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    if (_size - _tab.size() < std::distance(begin, end))
+    if (_size - _tab.size() < (unsigned long int)std::distance(begin, end))
         throw std::exception();
     _tab.insert(_tab.end(), begin, end);
 }
