@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 04:02:08 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/09 02:36:47 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 02:38:01 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int main()
 
     // create iterator from Span
 
-    a.addmultinumber(b.begin(), b.end());
+    //a.addmultinumber(b.begin(), b.end());
     return(0);
 }
