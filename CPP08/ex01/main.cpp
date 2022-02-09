@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 04:02:08 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 22:49:29 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 02:36:47 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,20 @@ int main()
     a.addNumber(-10000);
     a.addNumber(1000);
 
+    Span b(4);
+    b.addNumber(31);
+    b.addNumber(31);
+    b.addNumber(31);
+    b.addNumber(31);
+
     std::cout << std::endl << "Tab : { 1, 3, 5, 987 }" << std::endl;
     
     std::cout << "Shortest Span: " << a.shortestSpan() << std::endl;
 
     std::cout << "Longest Span: " << a.longestSpan() << std::endl;
+
+    // create iterator from Span
+
+    a.addmultinumber(b.begin(), b.end());
     return(0);
 }

@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:36:59 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 22:26:45 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 02:31:25 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ class Span
         void addNumber(int n);
         unsigned int shortestSpan(void);
         unsigned int longestSpan(void) const;
+        // function addmultinumber take a range of iterators
+        void addmultinumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 };

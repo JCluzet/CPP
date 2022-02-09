@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 03:47:10 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/02/08 22:45:58 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/02/09 02:32:53 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,10 @@ unsigned int     Span::longestSpan(void) const {
     if (_tab.size() <= 1)
 		throw(std::out_of_range("Not enough elements for a span"));
 	return (*std::max_element(_tab.begin(), _tab.end()) - *std::min_element(_tab.begin(), _tab.end()));
+}
+
+void addmultinumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+    std::copy(begin, end, std::back_inserter(_tab));
+    return (shortest);
 }
