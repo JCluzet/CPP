@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.cpp                                       :+:      :+:    :+:   */
+/*   Contact.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,69 +10,69 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Contacts.hpp"
+# include "Contact.hpp"
 
-std::string Contacts::get_fname() const
+std::string Contact::get_fname() const
 {
     return m_fname;
 }
 
-std::string Contacts::get_lname() const
+std::string Contact::get_lname() const
 {
     return m_lname;
 }
 
-std::string Contacts::get_nname() const
+std::string Contact::get_nname() const
 {
     return m_nname;
 }
 
-std::string Contacts::get_pnumber() const
+std::string Contact::get_pnumber() const
 {
     return m_pnumber;
 }
 
-std::string Contacts::get_secrets() const
+std::string Contact::get_secrets() const
 {
     return m_secrets;
 }
 
-int Contacts::get_id() const
+int Contact::get_id() const
 {
     return m_id;
 }
 
-void Contacts::setFname(std::string str)
+void Contact::setFname(std::string str)
 {
     m_fname = str;
 }
 
-void Contacts::setLname(std::string str)
+void Contact::setLname(std::string str)
 {
     m_lname = str;
 }
 
-void Contacts::setNname(std::string str)
+void Contact::setNname(std::string str)
 {
     m_nname = str;
 }
 
-void Contacts::setnumber(std::string str)
+void Contact::setnumber(std::string str)
 {
     m_pnumber = str;
 }
 
-void Contacts::setsecrets(std::string str)
+void Contact::setsecrets(std::string str)
 {
     m_secrets = str;
 }
 
-void Contacts::setid(int nb)
+void Contact::setid(int nb)
 {
     m_id = nb;
 }
 
-void print_contacts(std::string str)
+void print_Contact(std::string str)
 {
     int i = 0;
 

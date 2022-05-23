@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 20:43:14 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/05/23 04:03:24 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 04:30:58 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main(void)
     PhoneBook PhoneBook;
     std::string input;
     set_homepage();
+    
     while (1)
     {
         std::cout << "$ ➔ ";   

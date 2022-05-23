@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 02:13:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/05/23 03:49:02 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 04:26:25 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # include <iostream>
 # include <iomanip>
-# include "Contacts.hpp"
+# include "Contact.hpp"
 
 void set_homepage();
 int is_number(std::string str);
@@ -28,6 +28,6 @@ class PhoneBook
         int showContact(int index);
 
     private:
-        Contacts user[8];
-        int nb_contacts;
+        Contact user[8];
+        int nb_Contact;
 };

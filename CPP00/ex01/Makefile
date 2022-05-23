@@ -15,7 +15,7 @@ FLAGS    := -Wall -Wextra -Werror -std=c++98
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SRCS        :=      Contacts.cpp \
+SRCS        :=      Contact.cpp \
                           phonebook.cpp \
                           main.cpp \
                           
