@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/05/23 03:55:50 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 03:57:08 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ std::string enter_info(std::string str)
         std::cout << "\033[1A\033[K";
         std::cout << str << slen << "➔ ";
         std::cout << "❌ Empty input" << std::endl;
-        std::cout << "RETRY        ➔ ";
+        std::cout << "RETRY           ➔ ";
         input = "";
         std::getline(std::cin, input);
     }
@@ -70,7 +70,8 @@ int PhoneBook::addContact()
     user[PhoneBook::nb_contacts].setLname(enter_info("LAST NAME"));
     user[PhoneBook::nb_contacts].setNname(enter_info("NICKNAME"));
 
-    std::cout << "NUMBER       ➔ ";
+
+    std::cout << "NUMBER          ➔ ";
     getline(std::cin, input);
     digits = 1;
     for (unsigned int i = 0; i < input.length(); i++)
@@ -85,7 +86,7 @@ int PhoneBook::addContact()
         start = 1;
         std::cout << "\033[1A\033[K";
         std::cout << "Error: Phone number must be 10 digits long" << std::endl;
-        std::cout << "NUMBER       ➔ ";
+        std::cout << "NUMBER          ➔ ";
         input = "";
         std::getline(std::cin, input);
     digits = 1;
@@ -98,7 +99,9 @@ int PhoneBook::addContact()
     if (start != 0)
         std::cout << "\033[1A\033[K";
     std::cout << "\033[1A\033[K";
-    std::cout << "NUMBER       ➔ " << input << " ✅" << std::endl;
+    std::cout << "NUMBER          ➔ " << input << " ✅" << std::endl;
+
+
     user[PhoneBook::nb_contacts].setnumber(input);
     input = enter_info("DARKEST SECRET");
     user[PhoneBook::nb_contacts].setsecrets(input);
