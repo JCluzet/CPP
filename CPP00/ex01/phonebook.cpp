@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/05/23 03:57:08 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 04:12:45 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ std::string enter_info(std::string str)
     for (size_t i = 0; i < (16 - str.length()); i++)
         slen += " ";
     std::cout << str << slen << "➔ ";
-    std::getline(std::cin, input);
+    if (std::getline(std::cin, input) == 0)
+        return ("");
     while (input.length() == 0)
     {
         if (start != 0)
@@ -44,7 +45,8 @@ std::string enter_info(std::string str)
         std::cout << "❌ Empty input" << std::endl;
         std::cout << "RETRY           ➔ ";
         input = "";
-        std::getline(std::cin, input);
+        if (std::getline(std::cin, input) == 0)
+            return ("");
     }
     if (start != 0)
         std::cout << "\033[1A\033[K";
@@ -66,13 +68,20 @@ int PhoneBook::addContact()
     }
     std::cout << "\n------ NEW CONTACT ------\n\n\n";
     input = enter_info("FIRST NAME");
+    if (input == "")
+        return (-1);
     user[PhoneBook::nb_contacts].setFname(input);
-    user[PhoneBook::nb_contacts].setLname(enter_info("LAST NAME"));
-    user[PhoneBook::nb_contacts].setNname(enter_info("NICKNAME"));
+    input = enter_info("LAST NAME");
+    if (input == "")
+        return (-1);
+    user[PhoneBook::nb_contacts].setLname(input);
+    input = enter_info("NICKNAME");
+    user[PhoneBook::nb_contacts].setNname(input);
 
 
     std::cout << "NUMBER          ➔ ";
-    getline(std::cin, input);
+    if (getline(std::cin, input) == 0)
+        return (-1);
     digits = 1;
     for (unsigned int i = 0; i < input.length(); i++)
     {
@@ -88,7 +97,8 @@ int PhoneBook::addContact()
         std::cout << "Error: Phone number must be 10 digits long" << std::endl;
         std::cout << "NUMBER          ➔ ";
         input = "";
-        std::getline(std::cin, input);
+        if (std::getline(std::cin, input) == 0)
+            return (-1);
     digits = 1;
     for (unsigned int i = 0; i < input.length(); i++)
     {
@@ -104,6 +114,8 @@ int PhoneBook::addContact()
 
     user[PhoneBook::nb_contacts].setnumber(input);
     input = enter_info("DARKEST SECRET");
+    if (input == "")
+        return (-1);
     user[PhoneBook::nb_contacts].setsecrets(input);
     user[PhoneBook::nb_contacts].setid(PhoneBook::nb_contacts);
     PhoneBook::nb_contacts++;
@@ -140,7 +152,8 @@ int PhoneBook::searchContact()
     }
     std::cout << "\n|___________________________________________|\n";
     std::cout << "\nQuick search (type index): ";
-    std::getline(std::cin, input);
+    if (std::getline(std::cin, input) == 0)
+        return (0);
     std::cout << std::endl;
     while (is_number(input) == 0 || ft_stoi(input) > PhoneBook::nb_contacts || ft_stoi(input) < 1)
     {
@@ -148,7 +161,8 @@ int PhoneBook::searchContact()
             std::cout << "\nError not a number\nQuick search (type index):  ";
         else
             std::cout << "\nError index not exist\nQuick search (type index):  ";
-        std::getline(std::cin, input);
+        if (std::getline(std::cin, input) == 0)
+            return (0);
     }
     set_homepage();
     showContact(ft_stoi(input) - 1);
