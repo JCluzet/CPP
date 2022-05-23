@@ -6,17 +6,17 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 02:13:34 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/24 01:44:35 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 03:49:02 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#pragma once
 
 # include <iostream>
 # include <iomanip>
 # include "Contacts.hpp"
 
+void set_homepage();
 int is_number(std::string str);
 
 class PhoneBook
@@ -31,5 +31,3 @@ class PhoneBook
         Contacts user[8];
         int nb_contacts;
 };
-
-# endif

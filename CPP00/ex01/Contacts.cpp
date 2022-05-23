@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 01:39:08 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/12/28 14:03:47 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 02:58:41 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,7 @@ void Contacts::setNname(std::string str)
 
 void Contacts::setnumber(std::string str)
 {
-    if (str.size() == 10)
-        m_pnumber = str;
-    else
-        std::cout << "Error: Phone number must be 10 digits long" << std::endl;
+    m_pnumber = str;
 }
 
 void Contacts::setsecrets(std::string str)

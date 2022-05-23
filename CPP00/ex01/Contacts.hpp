@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Contacts.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 01:40:29 by jcluzet           #+#    #+#             */
-/*   Updated: 2021/11/24 01:41:06 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 03:49:14 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
-
+#pragma once
 # include <iostream>
 # include <iomanip>
 
@@ -46,5 +44,3 @@ class Contacts
     std::string m_pnumber;
     std::string m_secrets;
 };
-
-#endif
