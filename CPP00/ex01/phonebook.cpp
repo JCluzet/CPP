@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/05/23 03:54:13 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 03:55:50 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ std::string enter_info(std::string str)
     std::string input;
     bool start = 0;
     std::string slen;
-    for (size_t i = 0; i < (13 - str.length()); i++)
+    for (size_t i = 0; i < (16 - str.length()); i++)
         slen += " ";
     std::cout << str << slen << "➔ ";
     std::getline(std::cin, input);
