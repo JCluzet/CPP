@@ -6,7 +6,7 @@
 /*   By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 21:09:41 by jcluzet           #+#    #+#             */
-/*   Updated: 2022/05/23 03:48:17 by jcluzet          ###   ########.fr       */
+/*   Updated: 2022/05/23 03:54:13 by jcluzet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,8 @@ int PhoneBook::addContact()
     std::cout << "\033[1A\033[K";
     std::cout << "NUMBER       ➔ " << input << " ✅" << std::endl;
     user[PhoneBook::nb_contacts].setnumber(input);
-    user[PhoneBook::nb_contacts].setsecrets(enter_info("DARKEST SECRET"));
+    input = enter_info("DARKEST SECRET");
+    user[PhoneBook::nb_contacts].setsecrets(input);
     user[PhoneBook::nb_contacts].setid(PhoneBook::nb_contacts);
     PhoneBook::nb_contacts++;
     std::cout << std::endl << "CONTACT ADDED ✅" << std::endl << std::endl;
